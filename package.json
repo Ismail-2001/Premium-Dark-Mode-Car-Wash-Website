@@ -1,0 +1,28 @@
+{
+  "name": "elite-mobile-detailing",
+  "version": "1.0.0",
+  "description": "Premium mobile car detailing website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod",
+    "lint": "htmlhint index.html",
+    "test": "echo 'No tests specified yet'"
+  },
+  "keywords": [
+    "car-detailing",
+    "mobile-detailing",
+    "luxury-automotive",
+    "premium-service"
+  ],
+  "author": "Elite Studio LLC",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
