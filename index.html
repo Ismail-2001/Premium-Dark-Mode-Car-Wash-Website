@@ -116,6 +116,9 @@
             .ease-luxury {
                 transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
             }
+            .ease-expensive {
+                transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
             @keyframes slow-zoom {
                 0% { transform: scale(1); }
                 100% { transform: scale(1.1); }
@@ -180,21 +183,24 @@ function toggleMobileMenu() {
     menu.classList.toggle('translate-y-0');
 }
 </script>
-<header class="fixed top-0 left-0 right-0 w-full z-50 border-b border-white/5 bg-black/40 backdrop-blur-xl px-6 md:px-20 py-6 transition-all duration-500">
+<header class="fixed top-0 left-0 right-0 w-full z-50 glass-morphism-dark px-6 md:px-20 py-6 transition-all duration-500 hover:bg-black/60">
 <div class="max-w-[1400px] mx-auto flex items-center justify-between">
 <div class="flex items-center">
-<h2 class="text-white text-xl font-light tracking-[0.4em] leading-tight">ELITE<span class="text-primary text-[10px] font-bold tracking-widest ml-3">STUDIO</span></h2>
+<div class="relative group">
+<h2 class="text-white text-xl font-light tracking-[0.4em] leading-tight relative z-10">ELITE<span class="text-primary text-[10px] font-bold tracking-widest ml-3">STUDIO</span></h2>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
 </div>
 <div class="flex items-center gap-12">
 <nav class="hidden lg:flex items-center gap-10">
-<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors" href="#services">Services</a>
-<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors" href="#process">Process</a>
-<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-colors" href="#reviews">Testimonials</a>
+<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-all duration-300 hover:scale-105" href="#services">Services</a>
+<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-all duration-300 hover:scale-105" href="#process">Process</a>
+<a class="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-primary transition-all duration-300 hover:scale-105" href="#reviews">Testimonials</a>
 </nav>
-<button class="lg:hidden flex items-center justify-center w-10 h-10 text-white/60 hover:text-primary transition-colors" onclick="toggleMobileMenu()">
+<button class="lg:hidden flex items-center justify-center w-10 h-10 text-white/60 hover:text-primary transition-all duration-300 hover:scale-110" onclick="toggleMobileMenu()">
 <span class="material-symbols-outlined text-2xl">menu</span>
 </button>
-<button class="hidden lg:flex min-w-[140px] cursor-pointer items-center justify-center border border-primary/40 h-10 px-6 bg-transparent text-primary text-[10px] uppercase font-bold tracking-[0.2em] hover:bg-primary hover:text-black transition-all duration-500">
+<button class="hidden lg:flex min-w-[140px] cursor-pointer items-center justify-center border-gradient hover-lift h-10 px-6 bg-transparent text-primary text-[10px] uppercase font-bold tracking-[0.2em] transition-all duration-500">
                 Inquire
             </button>
 <button class="lg:hidden flex min-w-[100px] cursor-pointer items-center justify-center border border-primary/40 h-8 px-4 bg-transparent text-primary text-[9px] uppercase font-bold tracking-[0.2em] hover:bg-primary hover:text-black transition-all duration-500">
@@ -217,123 +223,148 @@ function toggleMobileMenu() {
 <main class="flex flex-col items-center">
 <section class="relative w-full h-screen overflow-hidden flex items-center justify-center">
 <div class="absolute inset-0 z-0 scale-110 animate-slow-zoom">
-<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/95 z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/95 z-10"></div>
 <img alt="Luxury Car Detail" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5_-DAZffOCCWIAiw9TMqawfI5gNma645SqiQS16aaOYDUT0x6ssQ4YamaARTiB97FHioVF-xub01B-IGj2ZdQOHlzajrFKpk3VoXm0Vhpg-38UDQ30rjGs2qnDzORlXim12jDWknzF8LRvywORWcJJQfQokX1haKL2ZwiaSEj9xaqAa-wrehNfyc26ahRZyLwMBi8jCjqU-JckFeQRY_TmYB0ueByewT_wuIR8kWg6T2XJM6OaYQw2gn6wLwiL1xY9axZYJCuWxFD"/>
 </div>
 <div class="bokeh w-64 h-64 top-[20%] left-[10%]" style="animation-delay: 0s;"></div>
 <div class="bokeh w-96 h-96 top-[60%] left-[70%]" style="animation-delay: 2s;"></div>
 <div class="bokeh w-48 h-48 top-[10%] left-[80%]" style="animation-delay: 5s;"></div>
 <div class="relative z-20 max-w-[1200px] px-6 text-center">
-<div class="flex flex-wrap justify-center gap-6 mb-8 reveal-word" style="animation-delay: 0.1s">
-<div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-<span class="material-symbols-outlined text-primary text-sm">star</span>
-<span class="text-white/80 text-xs font-medium">4.9 Google Rating</span>
+<div class="flex flex-wrap justify-center gap-6 mb-12 reveal-word" style="animation-delay: 0.1s">
+<div class="glass-morphism flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover-lift">
+<span class="material-symbols-outlined text-primary text-sm animate-glow">star</span>
+<span class="text-white/90 text-xs font-semibold">4.9 Google Rating</span>
 </div>
-<div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-<span class="material-symbols-outlined text-primary text-sm">verified</span>
-<span class="text-white/80 text-xs font-medium">500+ Luxury Vehicles</span>
+<div class="glass-morphism flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover-lift">
+<span class="material-symbols-outlined text-primary text-sm animate-glow">verified</span>
+<span class="text-white/90 text-xs font-semibold">500+ Luxury Vehicles</span>
 </div>
-<div class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-<span class="material-symbols-outlined text-primary text-sm">workspace_premium</span>
-<span class="text-white/80 text-xs font-medium">Certified Technicians</span>
+<div class="glass-morphism flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover-lift">
+<span class="material-symbols-outlined text-primary text-sm animate-glow">workspace_premium</span>
+<span class="text-white/90 text-xs font-semibold">Certified Technicians</span>
 </div>
 </div>
-<span class="text-primary/80 text-[10px] font-bold uppercase tracking-[0.6em] mb-8 block reveal-word" style="animation-delay: 0.2s">The Pinnacle of Care</span>
-<h1 class="text-white text-5xl md:text-8xl font-serif leading-[1.1] mb-10 overflow-hidden">
-<span class="reveal-word" style="animation-delay: 0.4s">The</span>
-<span class="reveal-word" style="animation-delay: 0.5s">Art</span>
-<span class="reveal-word" style="animation-delay: 0.6s">of</span>
-<span class="reveal-word" style="animation-delay: 0.7s">Automotive</span><br/>
-<span class="reveal-word" style="animation-delay: 0.8s">Perfection.</span>
+<span class="text-gradient font-bold uppercase tracking-[0.6em] mb-12 block reveal-word text-sm" style="animation-delay: 0.2s">The Pinnacle of Care</span>
+<h1 class="text-white text-6xl md:text-9xl font-serif leading-[1.1] mb-12 overflow-hidden">
+<span class="reveal-word block" style="animation-delay: 0.4s">The Art of</span>
+<span class="reveal-word block text-gradient" style="animation-delay: 0.6s">Automotive</span>
+<span class="reveal-word block" style="animation-delay: 0.8s">Perfection.</span>
 </h1>
-<div class="flex flex-col items-center gap-12">
-<p class="text-white/60 text-xs md:text-sm font-light uppercase tracking-[0.4em] max-w-[600px] leading-relaxed reveal-word" style="animation-delay: 1.2s">
+<div class="flex flex-col items-center gap-16">
+<p class="text-white/70 text-sm md:text-base font-light uppercase tracking-[0.4em] max-w-[600px] leading-relaxed reveal-word" style="animation-delay: 1.2s">
                     Bespoke mobile detailing for those who demand excellence.
                 </p>
-<div class="flex flex-col sm:flex-row items-center gap-4 reveal-word" style="animation-delay: 1.5s">
-<button class="relative group px-12 py-5 bg-primary overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+<div class="flex flex-col sm:flex-row items-center gap-6 reveal-word" style="animation-delay: 1.5s">
+<button class="relative group px-16 py-6 bg-gradient-to-r from-primary to-gold-accent overflow-hidden transition-all duration-700 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(212,175,55,0.3)] hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] rounded-full">
 <div class="absolute inset-0 animate-shimmer opacity-80"></div>
-<span class="relative z-10 text-black text-[11px] font-black uppercase tracking-[0.4em]">Book Your Experience</span>
+<span class="relative z-10 text-black text-[12px] font-black uppercase tracking-[0.4em]">Book Your Experience</span>
 </button>
-<button class="relative group px-8 py-5 bg-transparent border border-white/20 overflow-hidden transition-all duration-500 hover:border-white/40 hover:bg-white/5">
-<span class="text-white text-[11px] font-black uppercase tracking-[0.4em]">View Process</span>
+<button class="relative group px-12 py-6 glass-morphism border border-white/20 overflow-hidden transition-all duration-700 hover:border-white/40 hover:bg-white/10 hover:scale-105 rounded-full">
+<span class="text-white text-[12px] font-black uppercase tracking-[0.4em]">View Process</span>
 </button>
 </div>
 </div>
 </div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 reveal-word" style="animation-delay: 2s">
-<span class="text-white/30 text-[9px] uppercase tracking-[0.5em] font-bold rotate-0">Explore</span>
-<div class="w-[1px] h-16 bg-white/10 relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-full bg-primary scroll-line-anim"></div>
+<div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-8 reveal-word" style="animation-delay: 2s">
+<span class="text-white/40 text-[10px] uppercase tracking-[0.5em] font-bold">Explore</span>
+<div class="w-[2px] h-20 bg-gradient-to-b from-primary to-transparent relative overflow-hidden rounded-full">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary to-transparent scroll-line-anim"></div>
 </div>
 </div>
 </section>
-<section class="w-full bg-background-dark py-24 border-b border-white/5">
-<div class="max-w-[1400px] mx-auto px-6 md:px-20 grid grid-cols-2 md:grid-cols-4 gap-12">
-<div class="flex flex-col items-center md:items-start gap-4 group">
-<span class="material-symbols-outlined text-primary/40 text-3xl group-hover:text-primary transition-colors duration-500">workspace_premium</span>
-<span class="text-white/40 group-hover:text-white/70 transition-colors font-bold uppercase text-[9px] tracking-[0.4em]">Master Artisans</span>
+<section class="w-full bg-gradient-to-b from-background-dark to-obsidian py-32 border-b border-white/5">
+<div class="max-w-[1400px] mx-auto px-6 md:px-20 grid grid-cols-2 md:grid-cols-4 gap-16">
+<div class="flex flex-col items-center md:items-start gap-6 group cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-primary/60 text-4xl group-hover:text-primary transition-all duration-500 group-hover:scale-110">workspace_premium</span>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
-<div class="flex flex-col items-center md:items-start gap-4 group">
-<span class="material-symbols-outlined text-primary/40 text-3xl group-hover:text-primary transition-colors duration-500">verified_user</span>
-<span class="text-white/40 group-hover:text-white/70 transition-colors font-bold uppercase text-[9px] tracking-[0.4em]">Paint Protection</span>
+<span class="text-white/50 group-hover:text-white/80 transition-colors font-bold uppercase text-[10px] tracking-[0.4em]">Master Artisans</span>
 </div>
-<div class="flex flex-col items-center md:items-start gap-4 group">
-<span class="material-symbols-outlined text-primary/40 text-3xl group-hover:text-primary transition-colors duration-500">auto_awesome</span>
-<span class="text-white/40 group-hover:text-white/70 transition-colors font-bold uppercase text-[9px] tracking-[0.4em]">Molecular Clean</span>
+<div class="flex flex-col items-center md:items-start gap-6 group cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-primary/60 text-4xl group-hover:text-primary transition-all duration-500 group-hover:scale-110">verified_user</span>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
-<div class="flex flex-col items-center md:items-start gap-4 group">
-<span class="material-symbols-outlined text-primary/40 text-3xl group-hover:text-primary transition-colors duration-500">schedule</span>
-<span class="text-white/40 group-hover:text-white/70 transition-colors font-bold uppercase text-[9px] tracking-[0.4em]">Concierge Service</span>
+<span class="text-white/50 group-hover:text-white/80 transition-colors font-bold uppercase text-[10px] tracking-[0.4em]">Paint Protection</span>
+</div>
+<div class="flex flex-col items-center md:items-start gap-6 group cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-primary/60 text-4xl group-hover:text-primary transition-all duration-500 group-hover:scale-110">auto_awesome</span>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<span class="text-white/50 group-hover:text-white/80 transition-colors font-bold uppercase text-[10px] tracking-[0.4em]">Molecular Clean</span>
+</div>
+<div class="flex flex-col items-center md:items-start gap-6 group cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-primary/60 text-4xl group-hover:text-primary transition-all duration-500 group-hover:scale-110">schedule</span>
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<span class="text-white/50 group-hover:text-white/80 transition-colors font-bold uppercase text-[10px] tracking-[0.4em]">Concierge Service</span>
 </div>
 </div>
 </section>
 <section class="w-full max-w-[1400px] px-6 md:px-20 py-32" id="services">
-<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-<div class="flex flex-col gap-6">
-<span class="text-primary font-bold uppercase tracking-[0.5em] text-[10px]">Curated Services</span>
-<h2 class="text-white text-5xl md:text-6xl font-serif">The Collection</h2>
+<div class="flex flex-col md:flex-row justify-between items-end mb-32 gap-8">
+<div class="flex flex-col gap-8">
+<span class="text-gradient font-bold uppercase tracking-[0.5em] text-[12px]">Curated Services</span>
+<h2 class="text-white text-6xl md:text-7xl font-serif">The Collection</h2>
 </div>
-<p class="text-white/40 max-w-[450px] font-light text-lg leading-relaxed">Redefining automotive preservation through technical mastery and obsessive attention to detail.</p>
+<p class="text-white/50 max-w-[500px] font-light text-xl leading-relaxed">Redefining automotive preservation through technical mastery and obsessive attention to detail.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-<div class="group flex flex-col bg-transparent overflow-hidden">
-<div class="relative aspect-[3/4] overflow-hidden mb-8">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtSpkscqjHgJv00PuNEt9QY8QZtJybGAbebilBfPZWBVuZy92rqOcZYFhSn2VoCQg_ckMXpHE11Iqdr533Rz63pySFyWQXH0ALOkMtb8JduNBL0OQqWBn-bVw8AKWHAm_lnrKXtOGxQH1y-Mfs3K1FdGqmiv8uT8kkDPo6XHjrqRdQQP5QYvWVlK3Db-ZZYPlvZ-IDHT9zhSJsubxbUm_s-UrhyLdbG5HfUpNXawB0CT3WBjbYCHoa9wyV-CC00lhdBiXsDRVXwsQ5");'></div>
-</div>
-<div class="flex flex-col gap-4">
-<div class="flex justify-between items-baseline">
-<h3 class="text-white text-2xl font-serif">Interior Restoration</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+<div class="group flex flex-col bg-transparent overflow-hidden hover-lift">
+<div class="relative aspect-[3/4] overflow-hidden mb-10 rounded-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s] ease-expensive" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtSpkscqjHgJv00PuNEt9QY8QZtJybGAbebilBfPZWBVuZy92rqOcZYFhSn2VoCQg_ckMXpHE11Iqdr533Rz63pySFyWQXH0ALOkMtb8JduNBL0OQqWBn-bVw8AKWHAm_lnrKXtOGxQH1y-Mfs3K1FdGqmiv8uT8kkDPo6XHjrqRdQQP5QYvWVlK3Db-ZZYPlvZ-IDHT9zhSJsubxbUm_s-UrhyLdbG5HfUpNXawB0CT3WBjbYCHoa9wyV-CC00lhdBiXsDRVXwsQ5");'></div>
+<div class="absolute top-6 right-6 glass-morphism px-4 py-2 rounded-full border border-white/10">
 <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Tier I</span>
 </div>
-<p class="text-white/40 text-sm leading-relaxed font-light">Deep fiber extraction and pH-balanced heritage leather conditioning.</p>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white text-3xl font-serif">Interior Restoration</h3>
+<p class="text-white/50 text-lg leading-relaxed font-light">Deep fiber extraction and pH-balanced heritage leather conditioning.</p>
+<div class="flex items-center gap-4 text-primary/60">
+<span class="material-symbols-outlined text-sm">diamond</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Premium Care</span>
 </div>
 </div>
-<div class="group flex flex-col bg-transparent overflow-hidden">
-<div class="relative aspect-[3/4] overflow-hidden mb-8">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZDtdA3XKMNY7O2YJceER-ExsfiJmCiysOGy2fWhcmLAqQ4xpZ31ZO1CI-uWONkdWSBnzA6HSTrA8fboj4xlNBCpINU9YY01IniLre2GDSN-iXqqxWgaVpZ_3fghqGj0kAiPh3PknIL2ryE2WgLx4oEb6fgpQSEEg5fcMPG_GANpFkZui7BwB0x3u-DbP2fRYs4QpPJuihL5t0mkTdXDujcO3D4wOTJ95mBFid2EuMHXU3GBWkbg-bGJ8z3TEiwhasblogj1ne_d7w");'></div>
 </div>
-<div class="flex flex-col gap-4">
-<div class="flex justify-between items-baseline">
-<h3 class="text-white text-2xl font-serif">Surface Correction</h3>
+<div class="group flex flex-col bg-transparent overflow-hidden hover-lift">
+<div class="relative aspect-[3/4] overflow-hidden mb-10 rounded-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s] ease-expensive" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZDtdA3XKMNY7O2YJceER-ExsfiJmCiysOGy2fWhcmLAqQ4xpZ31ZO1CI-uWONkdWSBnzA6HSTrA8fboj4xlNBCpINU9YY01IniLre2GDSN-iXqqxWgaVpZ_3fghqGj0kAiPh3PknIL2ryE2WgLx4oEb6fgpQSEEg5fcMPG_GANpFkZui7BwB0x3u-DbP2fRYs4QpPJuihL5t0mkTdXDujcO3D4wOTJ95mBFid2EuMHXU3GBWkbg-bGJ8z3TEiwhasblogj1ne_d7w");'></div>
+<div class="absolute top-6 right-6 glass-morphism px-4 py-2 rounded-full border border-white/10">
 <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Tier II</span>
 </div>
-<p class="text-white/40 text-sm leading-relaxed font-light">Multi-stage orbital correction to achieve a flawless mirror-like clarity.</p>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white text-3xl font-serif">Surface Correction</h3>
+<p class="text-white/50 text-lg leading-relaxed font-light">Multi-stage orbital correction to achieve a flawless mirror-like clarity.</p>
+<div class="flex items-center gap-4 text-primary/60">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Advanced Treatment</span>
 </div>
 </div>
-<div class="group flex flex-col bg-transparent overflow-hidden">
-<div class="relative aspect-[3/4] overflow-hidden mb-8">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNxdDdtY7bVwIxvagk2HvfiyFS0X4u3XOo2FGm6OeP0jaqGDyVoEZ41VD4IJkIobJOxM8eoCeG5pKpI5aWld2Op3fHJVq7aa7Ej6BLgXuWUc7hWbU2veJ_I1CbiEAZKVbt2m8ofWoy5vx3i61Gz-EC_5YLJ15J0kbosAmuGAr58T2LZmaReYTSa4tk6ZVNKgLU2ypLEB-i6pXFF5e_Xyt_695_sd7qYhYc1NhqrhtG9As3VrWpVLwkkf9USs6jJ3nLNPp57hMD3Yvm");'></div>
 </div>
-<div class="flex flex-col gap-4">
-<div class="flex justify-between items-baseline">
-<h3 class="text-white text-2xl font-serif">Nanotech Shield</h3>
+<div class="group flex flex-col bg-transparent overflow-hidden hover-lift">
+<div class="relative aspect-[3/4] overflow-hidden mb-10 rounded-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
+<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-[2s] ease-expensive" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNxdDdtY7bVwIxvagk2HvfiyFS0X4u3XOo2FGm6OeP0jaqGDyVoEZ41VD4IJkIobJOxM8eoCeG5pKpI5aWld2Op3fHJVq7aa7Ej6BLgXuWUc7hWbU2veJ_I1CbiEAZKVbt2m8ofWoy5vx3i61Gz-EC_5YLJ15J0kbosAmuGAr58T2LZmaReYTSa4tk6ZVNKgLU2ypLEB-i6pXFF5e_Xyt_695_sd7qYhYc1NhqrhtG9As3VrWpVLwkkf9USs6jJ3nLNPp57hMD3Yvm");'></div>
+<div class="absolute top-6 right-6 glass-morphism px-4 py-2 rounded-full border border-white/10">
 <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Tier III</span>
 </div>
-<p class="text-white/40 text-sm leading-relaxed font-light">Permanent ceramic bonding for extreme hydrophobic self-cleaning properties.</p>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-white text-3xl font-serif">Nanotech Shield</h3>
+<p class="text-white/50 text-lg leading-relaxed font-light">Permanent ceramic bonding for extreme hydrophobic self-cleaning properties.</p>
+<div class="flex items-center gap-4 text-primary/60">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Ultimate Protection</span>
+</div>
 </div>
 </div>
 </div>
