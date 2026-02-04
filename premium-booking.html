@@ -1,0 +1,432 @@
+<!-- Premium Booking System -->
+<section class="w-full bg-background-dark py-32" id="booking">
+<div class="max-w-[1400px] mx-auto px-6 md:px-20">
+<!-- Section Header -->
+<div class="text-center mb-24 animate-luxury-reveal">
+<span class="text-primary font-bold uppercase tracking-[0.8em] text-[10px] block mb-6">Reserve Your Experience</span>
+<h2 class="text-white font-display text-section mb-8">Begin Your Transformation</h2>
+<p class="text-platinum/80 text-body max-w-3xl mx-auto leading-relaxed">
+    Schedule your elite detailing service with our simple booking process. Your journey to automotive perfection starts here.
+</p>
+</div>
+
+<!-- Multi-Step Booking Form -->
+<div class="max-w-4xl mx-auto">
+<div class="glass-luxury rounded-3xl p-12 border border-white/10">
+<!-- Progress Bar -->
+<div class="mb-12">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div id="step-1-indicator" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center transition-all duration-500">
+<span class="text-black font-bold">1</span>
+</div>
+<div class="w-24 h-0.5 bg-white/20" id="progress-1"></div>
+</div>
+<div class="flex items-center gap-4">
+<div id="step-2-indicator" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-500">
+<span class="text-white/60 font-bold">2</span>
+</div>
+<div class="w-24 h-0.5 bg-white/20" id="progress-2"></div>
+</div>
+<div class="flex items-center gap-4">
+<div id="step-3-indicator" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-500">
+<span class="text-white/60 font-bold">3</span>
+</div>
+<div class="w-24 h-0.5 bg-white/20" id="progress-3"></div>
+</div>
+<div class="flex items-center gap-4">
+<div id="step-4-indicator" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-500">
+<span class="text-white/60 font-bold">4</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between mt-4">
+<span class="text-platinum/60 text-xs">Service Selection</span>
+<span class="text-platinum/60 text-xs">Vehicle Details</span>
+<span class="text-platinum/60 text-xs">Schedule</span>
+<span class="text-platinum/60 text-xs">Confirmation</span>
+</div>
+</div>
+
+<!-- Step 1: Service Selection -->
+<div id="step-1" class="booking-step">
+<h3 class="text-white font-display text-2xl mb-8">Select Your Service</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="service-option luxury-card border-2 border-white/20 rounded-xl p-6 cursor-pointer hover:border-primary transition-all" data-service="interior">
+<div class="flex items-center justify-between mb-4">
+<h4 class="text-white font-display text-lg">Interior Restoration</h4>
+<span class="text-primary text-xl font-bold">$599</span>
+</div>
+<p class="text-platinum/60 text-small mb-4">Deep cleaning and leather conditioning</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Premium leather conditioning
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Deep fiber extraction
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Odor elimination
+</li>
+</ul>
+</div>
+
+<div class="service-option luxury-card border-2 border-white/20 rounded-xl p-6 cursor-pointer hover:border-primary transition-all" data-service="surface">
+<div class="flex items-center justify-between mb-4">
+<h4 class="text-white font-display text-lg">Surface Correction</h4>
+<span class="text-primary text-xl font-bold">$899</span>
+</div>
+<p class="text-platinum/60 text-small mb-4">Paint correction and enhancement</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Multi-stage correction
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+High-gloss enhancement
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Paint sealant
+</li>
+</ul>
+</div>
+
+<div class="service-option luxury-card border-2 border-white/20 rounded-xl p-6 cursor-pointer hover:border-primary transition-all" data-service="nanotech">
+<div class="flex items-center justify-between mb-4">
+<h4 class="text-white font-display text-lg">Nanotech Shield</h4>
+<span class="text-primary text-xl font-bold">$1,499</span>
+</div>
+<p class="text-platinum/60 text-small mb-4">Ceramic coating protection</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+9H ceramic coating
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+Hydrophobic protection
+</li>
+<li class="flex items-center gap-2 text-platinum/80 text-small">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+5-year warranty
+</li>
+</ul>
+</div>
+</div>
+<div class="flex justify-end">
+<button onclick="nextStep()" class="premium-gradient px-8 py-3 rounded-lg text-black text-sm font-bold uppercase tracking-wider hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed" id="step-1-next" disabled>
+    Continue
+</button>
+</div>
+</div>
+
+<!-- Step 2: Vehicle Details -->
+<div id="step-2" class="booking-step hidden">
+<h3 class="text-white font-display text-2xl mb-8">Vehicle Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Make</label>
+<input type="text" id="vehicle-make" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="e.g., Ferrari">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Model</label>
+<input type="text" id="vehicle-model" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="e.g., 488 GTB">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Year</label>
+<input type="text" id="vehicle-year" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="e.g., 2022">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Color</label>
+<input type="text" id="vehicle-color" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="e.g., Rosso Corsa">
+</div>
+</div>
+<div class="mb-8">
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Additional Notes</label>
+<textarea id="vehicle-notes" rows="4" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="Any specific concerns or requirements..."></textarea>
+</div>
+<div class="flex justify-between">
+<button onclick="previousStep()" class="glass-luxury px-8 py-3 rounded-lg text-platinum text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition-all">
+    Back
+</button>
+<button onclick="nextStep()" class="premium-gradient px-8 py-3 rounded-lg text-black text-sm font-bold uppercase tracking-wider hover:scale-105 transition-transform">
+    Continue
+</button>
+</div>
+</div>
+
+<!-- Step 3: Schedule -->
+<div id="step-3" class="booking-step hidden">
+<h3 class="text-white font-display text-2xl mb-8">Select Date & Time</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Preferred Date</label>
+<input type="date" id="booking-date" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Preferred Time</label>
+<select id="booking-time" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+<option value="">Select a time</option>
+<option value="08:00">8:00 AM</option>
+<option value="09:00">9:00 AM</option>
+<option value="10:00">10:00 AM</option>
+<option value="11:00">11:00 AM</option>
+<option value="12:00">12:00 PM</option>
+<option value="13:00">1:00 PM</option>
+<option value="14:00">2:00 PM</option>
+<option value="15:00">3:00 PM</option>
+<option value="16:00">4:00 PM</option>
+</select>
+</div>
+</div>
+<div class="mb-8">
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Service Location</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="location-option luxury-card border-2 border-white/20 rounded-xl p-4 cursor-pointer hover:border-primary transition-all" data-location="mobile">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="text-white font-display">Mobile Service</h4>
+<p class="text-platinum/60 text-small">We come to your location</p>
+</div>
+</div>
+</div>
+<div class="location-option luxury-card border-2 border-white/20 rounded-xl p-4 cursor-pointer hover:border-primary transition-all" data-location="facility">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">garage</span>
+<div>
+<h4 class="text-white font-display">Our Facility</h4>
+<p class="text-platinum/60 text-small">Visit our luxury studio</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between">
+<button onclick="previousStep()" class="glass-luxury px-8 py-3 rounded-lg text-platinum text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition-all">
+    Back
+</button>
+<button onclick="nextStep()" class="premium-gradient px-8 py-3 rounded-lg text-black text-sm font-bold uppercase tracking-wider hover:scale-105 transition-transform">
+    Continue
+</button>
+</div>
+</div>
+
+<!-- Step 4: Confirmation -->
+<div id="step-4" class="booking-step hidden">
+<h3 class="text-white font-display text-2xl mb-8">Review & Confirm</h3>
+<div class="glass-luxury rounded-xl p-8 border border-white/10 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h4 class="text-primary font-semibold mb-4">Service Details</h4>
+<div class="space-y-3">
+<div class="flex justify-between">
+<span class="text-platinum/60">Service:</span>
+<span id="confirm-service" class="text-white">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-platinum/60">Duration:</span>
+<span id="confirm-duration" class="text-white">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-platinum/60">Price:</span>
+<span id="confirm-price" class="text-primary font-bold">-</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-primary font-semibold mb-4">Appointment</h4>
+<div class="space-y-3">
+<div class="flex justify-between">
+<span class="text-platinum/60">Date:</span>
+<span id="confirm-date" class="text-white">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-platinum/60">Time:</span>
+<span id="confirm-time" class="text-white">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-platinum/60">Location:</span>
+<span id="confirm-location" class="text-white">-</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Contact Information -->
+<div class="mb-8">
+<h4 class="text-primary font-semibold mb-4">Contact Information</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Name</label>
+<input type="text" id="contact-name" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="Your full name">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Phone</label>
+<input type="tel" id="contact-phone" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="(310) 555-0198">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Email</label>
+<input type="email" id="contact-email" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="concierge@elitestudio.com">
+</div>
+<div>
+<label class="text-platinum/80 text-small font-semibold uppercase tracking-wider block mb-3">Address</label>
+<input type="text" id="contact-address" class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary transition-colors" placeholder="Service address">
+</div>
+</div>
+</div>
+
+<div class="flex justify-between">
+<button onclick="previousStep()" class="glass-luxury px-8 py-3 rounded-lg text-platinum text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition-all">
+    Back
+</button>
+<button onclick="submitBooking()" class="premium-gradient px-8 py-3 rounded-lg text-black text-sm font-bold uppercase tracking-wider hover:scale-105 transition-transform">
+    Confirm Booking
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+// Multi-Step Booking System
+let currentStep = 1;
+let bookingData = {};
+
+// Service selection
+document.querySelectorAll('.service-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.service-option').forEach(opt => {
+            opt.classList.remove('border-primary', 'bg-primary/10');
+        });
+        this.classList.add('border-primary', 'bg-primary/10');
+        bookingData.service = this.dataset.service;
+        document.getElementById('step-1-next').disabled = false;
+    });
+});
+
+// Location selection
+document.querySelectorAll('.location-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.location-option').forEach(opt => {
+            opt.classList.remove('border-primary', 'bg-primary/10');
+        });
+        this.classList.add('border-primary', 'bg-primary/10');
+        bookingData.location = this.dataset.location;
+    });
+});
+
+function nextStep() {
+    if (validateStep(currentStep)) {
+        document.getElementById(`step-${currentStep}`).classList.add('hidden');
+        currentStep++;
+        document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+        updateProgress();
+        updateConfirmation();
+    }
+}
+
+function previousStep() {
+    document.getElementById(`step-${currentStep}`).classList.add('hidden');
+    currentStep--;
+    document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+    updateProgress();
+}
+
+function updateProgress() {
+    for (let i = 1; i <= 4; i++) {
+        const indicator = document.getElementById(`step-${i}-indicator`);
+        const progress = document.getElementById(`progress-${i}`);
+        
+        if (i < currentStep) {
+            indicator.classList.add('bg-primary');
+            indicator.classList.remove('bg-white/20');
+            indicator.querySelector('span').classList.add('text-black');
+            indicator.querySelector('span').classList.remove('text-white/60');
+            if (progress) progress.classList.add('bg-primary');
+        } else if (i === currentStep) {
+            indicator.classList.add('bg-primary');
+            indicator.classList.remove('bg-white/20');
+            indicator.querySelector('span').classList.add('text-black');
+            indicator.querySelector('span').classList.remove('text-white/60');
+        } else {
+            indicator.classList.remove('bg-primary');
+            indicator.classList.add('bg-white/20');
+            indicator.querySelector('span').classList.remove('text-black');
+            indicator.querySelector('span').classList.add('text-white/60');
+            if (progress) progress.classList.remove('bg-primary');
+        }
+    }
+}
+
+function validateStep(step) {
+    if (step === 1) {
+        return bookingData.service !== undefined;
+    } else if (step === 2) {
+        return document.getElementById('vehicle-make').value && 
+               document.getElementById('vehicle-model').value;
+    } else if (step === 3) {
+        return document.getElementById('booking-date').value && 
+               document.getElementById('booking-time').value &&
+               bookingData.location !== undefined;
+    }
+    return true;
+}
+
+function updateConfirmation() {
+    if (currentStep === 4) {
+        // Service details
+        const serviceNames = {
+            'interior': 'Interior Restoration - $599',
+            'surface': 'Surface Correction - $899',
+            'nanotech': 'Nanotech Shield - $1,499'
+        };
+        document.getElementById('confirm-service').textContent = serviceNames[bookingData.service] || '-';
+        
+        // Vehicle details
+        bookingData.make = document.getElementById('vehicle-make').value;
+        bookingData.model = document.getElementById('vehicle-model').value;
+        
+        // Schedule details
+        bookingData.date = document.getElementById('booking-date').value;
+        bookingData.time = document.getElementById('booking-time').value;
+        
+        document.getElementById('confirm-date').textContent = bookingData.date || '-';
+        document.getElementById('confirm-time').textContent = bookingData.time || '-';
+        document.getElementById('confirm-location').textContent = 
+            bookingData.location === 'mobile' ? 'Mobile Service' : 'Our Facility';
+    }
+}
+
+function submitBooking() {
+    // Collect all booking data
+    bookingData.name = document.getElementById('contact-name').value;
+    bookingData.phone = document.getElementById('contact-phone').value;
+    bookingData.email = document.getElementById('contact-email').value;
+    bookingData.address = document.getElementById('contact-address').value;
+    
+    // Here you would typically send this data to your backend
+    console.log('Booking submitted:', bookingData);
+    
+    // Show success message
+    alert('Thank you for your booking! We will contact you shortly to confirm your appointment.');
+    
+    // Reset form
+    currentStep = 1;
+    bookingData = {};
+    document.querySelectorAll('.booking-step').forEach(step => step.classList.add('hidden'));
+    document.getElementById('step-1').classList.remove('hidden');
+    updateProgress();
+}
+
+// Set minimum date to today
+document.getElementById('booking-date').min = new Date().toISOString().split('T')[0];
+</script>
